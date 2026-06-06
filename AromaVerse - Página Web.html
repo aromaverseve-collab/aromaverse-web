@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<!-- saved from url=(0202)https://aromaverse-ve.github.io/aromaverse-tienda/?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnNkxnf8s0Rtv_RAuy8KY1-Pul3TjPWeVJgBAL7ZXUTr-C1fcuXTq5jf8QZxQ_aem_6RkmcNJCp8jyK2ZXPzrJZw -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AromaVerse - Tienda Premium</title>
+    <link href="./AromaVerse - Página Web_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./AromaVerse - Página Web_files/style.css">
+    
+    <style>
+        /* --- ESTILOS ORIGINALES (NO TOCAR) --- */
+        :root {
+            --gold: #dab469;
+            --dark: #333;
+        }
+
+        /* --- ESTILOS GENERALES Y IMÁGENES --- */
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        /* --- ESTILOS DEL BUSCADOR --- */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+            position: relative;
+            padding: 0 20px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            padding-left: 45px;
+            font-size: 16px;
+            border: 2px solid #eee;
+            border-radius: 50px;
+            outline: none;
+            transition: all 0.3s ease;
+            font-family: 'Lato', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .search-input:focus {
+            border-color: var(--gold);
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(218, 180, 105, 0.2);
+        }
+        .search-icon {
+            position: absolute;
+            left: 35px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        /* --- NUEVOS ESTILOS DE FILTROS (DOBLE FILA) --- */
+        .filters-container {
+            margin-bottom: 40px;
+            text-align: center;
+            padding: 0 10px;
+        }
+        
+        .filter-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 1px solid #ddd;
+            background: transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            transition: all 0.3s;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--gold);
+            color: white;
+            border-color: var(--gold);
+            box-shadow: 0 4px 10px rgba(218, 180, 105, 0.3);
+        }
+
+        .filter-label-inline {
+            font-size: 12px;
+            color: #aaa;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>AROMAVERSE</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://aromaverse-ve.github.io/aromaverse-tienda/?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnNkxnf8s0Rtv_RAuy8KY1-Pul3TjPWeVJgBAL7ZXUTr-C1fcuXTq5jf8QZxQ_aem_6RkmcNJCp8jyK2ZXPzrJZw#inicio" onclick="scrollToSection(&#39;inicio&#39;)">Inicio</a></li>
+                <li><a href="https://aromaverse-ve.github.io/aromaverse-tienda/?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnNkxnf8s0Rtv_RAuy8KY1-Pul3TjPWeVJgBAL7ZXUTr-C1fcuXTq5jf8QZxQ_aem_6RkmcNJCp8jyK2ZXPzrJZw#products-grid" onclick="scrollToSection(&#39;products-grid&#39;)">Tienda</a></li>
+                <li><a href="https://aromaverse-ve.github.io/aromaverse-tienda/?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnNkxnf8s0Rtv_RAuy8KY1-Pul3TjPWeVJgBAL7ZXUTr-C1fcuXTq5jf8QZxQ_aem_6RkmcNJCp8jyK2ZXPzrJZw#sobre" onclick="scrollToSection(&#39;sobre&#39;)">Sobre Nosotros</a></li>
+                <li><a href="https://aromaverse-ve.github.io/aromaverse-tienda/?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnNkxnf8s0Rtv_RAuy8KY1-Pul3TjPWeVJgBAL7ZXUTr-C1fcuXTq5jf8QZxQ_aem_6RkmcNJCp8jyK2ZXPzrJZw#contacto" onclick="scrollToSection(&#39;contacto&#39;)">Contacto</a></li>
+                <li class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Descubre tu esencia</h2>
+            <p>Una colección curada de fragancias premium para momentos inolvidables.</p>
+            <button class="btn btn-primary" onclick="scrollToSection(&#39;products-grid&#39;)">Ver Catálogo</button>
+        </div>
+    </header>
+
+    <section class="shop container">
+        <h2>Nuestros Perfumes</h2>
+        
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Buscar perfume (ej. Yara, Oud, Creed)..." oninput="searchProducts(this.value)">
+        </div>
+
+        <div class="filters-container">
+            <div class="filter-row">
+                <button class="filter-btn active" onclick="filterProducts(&#39;all&#39;)" style="font-weight: bold;">Todos</button>
+                
+                <button class="filter-btn" onclick="filterProducts(&#39;trending&#39;)">Trending 🔥</button>
+                <button class="filter-btn" onclick="filterProducts(&#39;arabic&#39;)">Árabes 🕌</button>
+                <button class="filter-btn" onclick="filterProducts(&#39;niche&#39;)">Nicho 💎</button>
+            </div>
+
+            <div class="filter-row">
+                <span class="filter-label-inline">Género:</span>
+                <button class="filter-btn" onclick="filterProducts(&#39;Hombre&#39;)">Hombre 👨</button>
+                <button class="filter-btn" onclick="filterProducts(&#39;Mujer&#39;)">Mujer 👩</button>
+                <button class="filter-btn" onclick="filterProducts(&#39;Unisex&#39;)">Unisex 👥</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="products-grid"><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/precieux.jpg.jpg" alt="Armaf Club de Nuit Precieux" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Armaf Club de Nuit Precieux</h3>
+                        <div class="product-gender">👨 Hombre</div>
+                        <div class="product-rating">⭐ 4.9 <span style="color:#aaa; font-size:0.8em">(150)</span></div>
+                        <p class="product-description">Lujo encriptado: elegancia amaderada y afrutada con una estela de exclusividad absoluta.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-1">$10.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option">
+                            <input type="radio" name="decant-1" value="5" data-price="10" checked="" onchange="updatePrice(1)">
+                            <span class="decant-label">5ml - $10.00</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-1" value="10" data-price="18" onchange="updatePrice(1)">
+                            <span class="decant-label">10ml - $18.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(1)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/cni-man.jpg.jpg" alt="Armaf Club de Nuit Intense" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Armaf Club de Nuit Intense</h3>
+                        <div class="product-gender">👨 Hombre</div>
+                        <div class="product-rating">⭐ 4.8 <span style="color:#aaa; font-size:0.8em">(85)</span></div>
+                        <p class="product-description">La Bestia Negra, una salida cítrica ahumada que evoluciona hacia una masculinidad imponente.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-2">$55.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-2" value="Botella" data-price="55" checked="" onchange="updatePrice(2)">
+                            <span class="decant-label">Botella ($55.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-2" value="10" data-price="13" onchange="updatePrice(2)">
+                            <span class="decant-label">10ml - $13.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(2)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/fakhar.jpg.jpg" alt="Fakhar Lattafa" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Fakhar Lattafa</h3>
+                        <div class="product-gender">👨 Hombre</div>
+                        <div class="product-rating">⭐ 4.8 <span style="color:#aaa; font-size:0.8em">(190)</span></div>
+                        <p class="product-description">Elegancia pulcra: frescura aromática con toques de manzana, lavanda y maderas limpias.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-3">$50.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-3" value="Botella" data-price="50" checked="" onchange="updatePrice(3)">
+                            <span class="decant-label">Botella ($50.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-3" value="10" data-price="11" onchange="updatePrice(3)">
+                            <span class="decant-label">10ml - $11.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(3)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/gold-edition.jpg.jpg" alt="Al Haramain Amber Oud Gold Edition" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Al Haramain Amber Oud Gold Edition</h3>
+                        <div class="product-gender">👥 Unisex</div>
+                        <div class="product-rating">⭐ 4.9 <span style="color:#aaa; font-size:0.8em">(320)</span></div>
+                        <p class="product-description">Opulencia amaderada equilibrada con un corazón dulce de ámbar.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-4">$65.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-4" value="Botella" data-price="65" checked="" onchange="updatePrice(4)">
+                            <span class="decant-label">Botella ($65.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-4" value="10" data-price="14" onchange="updatePrice(4)">
+                            <span class="decant-label">10ml - $14.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(4)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/yara-rosa.jpg.jpg" alt="Lataffa Yara" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Lataffa Yara</h3>
+                        <div class="product-gender">👩 Mujer</div>
+                        <div class="product-rating">⭐ 4.6 <span style="color:#aaa; font-size:0.8em">(45)</span></div>
+                        <p class="product-description">Feminidad absoluta: suavidad floral y aterciopelada, como un postre cremoso de fresas.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-5">$45.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-5" value="Botella" data-price="45" checked="" onchange="updatePrice(5)">
+                            <span class="decant-label">Botella ($45.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-5" value="10" data-price="10" onchange="updatePrice(5)">
+                            <span class="decant-label">10ml - $10.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(5)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/khamrah.jpg.jpg" alt="Lattafa Khamrah Qahwa" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Lattafa Khamrah Qahwa</h3>
+                        <div class="product-gender">👥 Unisex</div>
+                        <div class="product-rating">⭐ 4.9 <span style="color:#aaa; font-size:0.8em">(400)</span></div>
+                        <p class="product-description">Aura acogedora: la calidez de un café tostado, especias dulces y praliné que abraza los sentidos.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-6">$60.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-6" value="Botella" data-price="60" checked="" onchange="updatePrice(6)">
+                            <span class="decant-label">Botella ($60.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-6" value="10" data-price="13" onchange="updatePrice(6)">
+                            <span class="decant-label">10ml - $13.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(6)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/yara-tous.jpg.jpg" alt="Lataffa Yara Tous" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Lataffa Yara Tous</h3>
+                        <div class="product-gender">👩 Mujer</div>
+                        <div class="product-rating">⭐ 4.5 <span style="color:#aaa; font-size:0.8em">(60)</span></div>
+                        <p class="product-description">Alegría embotellada: una explosión tropical y luminosa de mango, coco y flores blancas.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-7">$45.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-7" value="Botella" data-price="45" checked="" onchange="updatePrice(7)">
+                            <span class="decant-label">Botella ($45.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-7" value="10" data-price="10" onchange="updatePrice(7)">
+                            <span class="decant-label">10ml - $10.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(7)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/afnan-9am.jpg.jpg" alt="Afnan 9 AM Dive" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Afnan 9 AM Dive</h3>
+                        <div class="product-gender">👥 Unisex</div>
+                        <div class="product-rating">⭐ 4.8 <span style="color:#aaa; font-size:0.8em">(110)</span></div>
+                        <p class="product-description">Energía inagotable: frescura acuática efervescente y limpia, ideal para dominar el día a día.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-8">$50.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-8" value="Botella" data-price="50" checked="" onchange="updatePrice(8)">
+                            <span class="decant-label">Botella ($50.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-8" value="10" data-price="11" onchange="updatePrice(8)">
+                            <span class="decant-label">10ml - $11.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(8)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/zanzibar.jpg.jpg" alt="Lataffa Asad Zanzibar" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Lataffa Asad Zanzibar</h3>
+                        <div class="product-gender">👨 Hombre</div>
+                        <div class="product-rating">⭐ 4.4 <span style="color:#aaa; font-size:0.8em">(280)</span></div>
+                        <p class="product-description">Misterio tropical, perfume un tanto polémico para destacar si o si: coco cremoso salado envuelto en iris y pimienta, un aroma rompedor.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-9">$50.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-9" value="Botella" data-price="50" checked="" onchange="updatePrice(9)">
+                            <span class="decant-label">Botella ($50.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-9" value="10" data-price="10" onchange="updatePrice(9)">
+                            <span class="decant-label">10ml - $10.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(9)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/khair-pistachio.jpg.jpg" alt="Khair Pistachio" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Khair Pistachio</h3>
+                        <div class="product-gender">👥 Unisex</div>
+                        <div class="product-rating">⭐ 4.6 <span style="color:#aaa; font-size:0.8em">(95)</span></div>
+                        <p class="product-description">Adicción pura: un festín dulce, cremoso e irresistible de pistacho y notas gourmand.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-10">$12.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option">
+                            <input type="radio" name="decant-10" value="10" data-price="12" checked="" onchange="updatePrice(10)">
+                            <span class="decant-label">10ml - $12.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(10)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/aqua-dubai.jpg.jpg" alt="Al Haramain Amber Oud Aqua Dubai" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Al Haramain Amber Oud Aqua Dubai</h3>
+                        <div class="product-gender">👥 Unisex</div>
+                        <div class="product-rating">⭐ 4.9 <span style="color:#aaa; font-size:0.8em">(500)</span></div>
+                        <p class="product-description">Sofisticación fresca: una brisa cítrica y vibrante que reposa sobre una base amaderada de lujo.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-11">$95.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-11" value="Botella" data-price="95" checked="" onchange="updatePrice(11)">
+                            <span class="decant-label">Botella ($95.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-11" value="5" data-price="12" onchange="updatePrice(11)">
+                            <span class="decant-label">5ml - $12.00</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-11" value="10" data-price="22" onchange="updatePrice(11)">
+                            <span class="decant-label">10ml - $22.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(11)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/afnan-9pm.jpg.jpg" alt="Afnan 9 PM" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Afnan 9 PM</h3>
+                        <div class="product-gender">👨 Hombre</div>
+                        <div class="product-rating">⭐ 4.8 <span style="color:#aaa; font-size:0.8em">(600)</span></div>
+                        <p class="product-description">El alma de la fiesta: dulzura especiada y afrutada, diseñada para las noches de conquista.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-12">$45.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-12" value="Botella" data-price="45" checked="" onchange="updatePrice(12)">
+                            <span class="decant-label">Botella ($45.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-12" value="10" data-price="11" onchange="updatePrice(12)">
+                            <span class="decant-label">10ml - $11.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(12)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image"><img src="./AromaVerse - Página Web_files/asad.jpg.jpg" alt="Lataffa Asad" onerror="this.onerror=null; this.parentNode.innerHTML=&#39;🧴&#39;;"></div>
+                    <div class="product-info">
+                        <div class="product-category">Árabe 🕌</div>
+                        <h3 class="product-name">Lataffa Asad</h3>
+                        <div class="product-gender">👨 Hombre</div>
+                        <div class="product-rating">⭐ 4.9 <span style="color:#aaa; font-size:0.8em">(70)</span></div>
+                        <p class="product-description">Poder oscuro: calidez ambarina, especias vibrantes y vainilla con un perfil masculino dominante.</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-13">$45.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        <div class="decants-section"><label>Formato:</label><div class="decants-options">
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-13" value="Botella" data-price="45" checked="" onchange="updatePrice(13)">
+                            <span class="decant-label">Botella ($45.00)</span>
+                        </label>
+                    
+                        <label class="decant-option">
+                            <input type="radio" name="decant-13" value="10" data-price="10" onchange="updatePrice(13)">
+                            <span class="decant-label">10ml - $10.00</span>
+                        </label>
+                    </div></div>
+                        <button class="btn-add-cart" onclick="addToCart(13)">Añadir al Carrito</button>
+                        
+                    </div>
+                </div></div>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2>Por qué elegirnos</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>💎 Calidad Premium</h3>
+                    <p>Solo trabajamos con casas perfumeras originales.</p>
+                </div>
+                <div class="feature">
+                    <h3>🚚 Envío Seguro</h3>
+                    <p>Empaquetado especial para proteger el cristal.</p>
+                </div>
+                <div class="feature">
+                    <h3>✨ Decants Originales</h3>
+                    <p>Prueba perfumes de lujo en formatos accesibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Ubicación</h3>
+                    <p>Caracas, Venezuela</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Instagram</h3>
+                    <p>@aromaverse.ve</p>
+                </div>
+                <div class="contact-item">
+                    <h3>WhatsApp</h3>
+                    <p>+58 424-2201111</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Tu Carrito</h3>
+                <button onclick="toggleCart()" class="close-btn">✕</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">Total: <span id="cart-total">$0.00</span></div>
+                <button class="btn btn-primary" onclick="checkout()">Finalizar Compra por WhatsApp</button>
+                <button class="btn btn-secondary" onclick="toggleCart()">Seguir viendo</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 AromaVerse. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        /* --- BASE DE DATOS DE PRODUCTOS --- */
+        const products = [
+            {
+                id: 1,
+                name: "Armaf Club de Nuit Precieux" ,
+                category: "arabic",
+                gender: "Hombre",
+                rating: 4.9,
+                reviews: 150,
+                description: "Lujo encriptado: elegancia amaderada y afrutada con una estela de exclusividad absoluta.",
+                price: 10.00,
+                soloDecant: true,
+                image: "precieux.jpg.jpg",
+                decants: [ { ml: 5, price: 10.00 }, { ml: 10, price: 18.00 } ]
+            },
+            {
+                id: 2,
+                name: "Armaf Club de Nuit Intense",
+                category: "arabic",
+                gender: "Hombre",
+                rating: 4.8,
+                reviews: 85,
+                description: "La Bestia Negra, una salida cítrica ahumada que evoluciona hacia una masculinidad imponente.",
+                price: 55.00,
+                image: "cni-man.jpg.jpg",
+                decants: [ { ml: 10, price: 13.00 } ]
+            },
+            {
+                id: 3,
+                name: "Fakhar Lattafa",
+                category: "arabic",
+                gender: "Hombre",
+                rating: 4.8,
+                reviews: 190,
+                description: "Elegancia pulcra: frescura aromática con toques de manzana, lavanda y maderas limpias.",
+                price: 50.00,
+                image: "fakhar.jpg.jpg",
+                decants: [ { ml: 10, price: 11.00 } ]
+            },
+            {
+                id: 4,
+                name: "Al Haramain Amber Oud Gold Edition",
+                category: "arabic",
+                gender: "Unisex",
+                rating: 4.9,
+                reviews: 320,
+                description: "Opulencia amaderada equilibrada con un corazón dulce de ámbar.",
+                price: 65.00,
+                image: "gold-edition.jpg.jpg",
+                decants: [ { ml: 10, price: 14.00 } ]
+            },
+            {
+                id: 5,
+                name: "Lataffa Yara",
+                category: "arabic",
+                gender: "Mujer",
+                rating: 4.6,
+                reviews: 45,
+                description: "Feminidad absoluta: suavidad floral y aterciopelada, como un postre cremoso de fresas.",
+                price: 45.00,
+                image: "yara-rosa.jpg.jpg",
+                decants: [ { ml: 10, price: 10.00 } ]
+            },
+            {
+                id: 6,
+                name: "Lattafa Khamrah Qahwa",
+                category: "arabic",
+                gender: "Unisex",
+                rating: 4.9,
+                reviews: 400,
+                description: "Aura acogedora: la calidez de un café tostado, especias dulces y praliné que abraza los sentidos.",
+                price: 60.00,
+                image: "khamrah.jpg.jpg",
+                decants: [ { ml: 10, price: 13.00 } ]
+            },
+            {
+                id: 7,
+                name: "Lataffa Yara Tous",
+                category: "arabic",
+                gender: "Mujer",
+                rating: 4.5,
+                reviews: 60,
+                description: "Alegría embotellada: una explosión tropical y luminosa de mango, coco y flores blancas.",
+                price: 45.00,
+                image: "yara-tous.jpg.jpg",
+                decants: [ { ml: 10, price: 10.00 } ]
+            },
+            {
+                id: 8,
+                name: "Afnan 9 AM Dive",
+                category: "arabic",
+                gender: "Unisex",
+                rating: 4.8,
+                reviews: 110,
+                description: "Energía inagotable: frescura acuática efervescente y limpia, ideal para dominar el día a día.",
+                price: 50.00,
+                image: "afnan-9am.jpg.jpg",
+                decants: [ { ml: 10, price: 11.00 } ]
+            },
+            {
+                id: 9,
+                name: "Lataffa Asad Zanzibar",
+                category: "arabic",
+                gender: "Hombre",
+                rating: 4.4,
+                reviews: 280,
+                description: "Misterio tropical, perfume un tanto polémico para destacar si o si: coco cremoso salado envuelto en iris y pimienta, un aroma rompedor.",
+                price: 50.00,
+                image: "zanzibar.jpg.jpg",
+                decants: [ { ml: 10, price: 10.00 } ]
+            },
+            {
+                id: 10,
+                name: "Khair Pistachio",
+                category: "arabic",
+                gender: "Unisex",
+                rating: 4.6,
+                reviews: 95,
+                description: "Adicción pura: un festín dulce, cremoso e irresistible de pistacho y notas gourmand.",
+                price: 12.00,
+                soloDecant: true,
+                image: "khair-pistachio.jpg.jpg",
+                decants: [ { ml: 10, price: 12.00 } ]
+            },
+            {
+                id: 11,
+                name: "Al Haramain Amber Oud Aqua Dubai",
+                category: "arabic",
+                gender: "Unisex",
+                rating: 4.9,
+                reviews: 500,
+                description: "Sofisticación fresca: una brisa cítrica y vibrante que reposa sobre una base amaderada de lujo.",
+                price: 95.00,
+                image: "aqua-dubai.jpg.jpg",
+                decants: [ { ml: 5, price: 12.00 }, { ml: 10, price: 22.00 } ]
+            },
+            {
+                id: 12,
+                name: "Afnan 9 PM",
+                category: "arabic",
+                gender: "Hombre",
+                rating: 4.8,
+                reviews: 600,
+                description: "El alma de la fiesta: dulzura especiada y afrutada, diseñada para las noches de conquista.",
+                price: 45.00,
+                image: "afnan-9pm.jpg.jpg",
+                decants: [ { ml: 10, price: 11.00 } ]
+            },
+            {
+                id: 13,
+                name: "Lataffa Asad",
+                category: "arabic",
+                gender: "Hombre",
+                rating: 4.9,
+                reviews: 70,
+                description: "Poder oscuro: calidez ambarina, especias vibrantes y vainilla con un perfil masculino dominante.",
+                price: 45.00,
+                image: "asad.jpg.jpg",
+                decants: [ { ml: 10, price: 10.00 } ]
+            }
+        ];
+
+        /* --- LÓGICA DE LA TIENDA --- */
+        let cart = JSON.parse(localStorage.getItem('aromaverse_cart')) || [];
+        
+        // Inicializar
+        renderProducts(products); 
+        updateCartCount();
+
+        function addSingleItemToCart(name, price) {
+            // Añadir items sueltos del modal al carrito
+            const cartItemId = name.replace(/\s+/g, '-').toLowerCase(); // ID simple basado en nombre
+            
+            const existing = cart.find(item => item.id === cartItemId);
+            
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({
+                    id: cartItemId,
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            localStorage.setItem('aromaverse_cart', JSON.stringify(cart));
+            updateCartCount();
+            
+            // Feedback visual simple
+            const btn = event.target;
+            const originalText = btn.innerText;
+            btn.innerText = "¡Listo!";
+            btn.style.backgroundColor = "#4CAF50";
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.backgroundColor = "";
+            }, 1000);
+
+            const panel = document.getElementById('cart-panel');
+            if(panel && panel.classList.contains('active')) updateCartDisplay();
+        }
+
+
+        /* --- FUNCIÓN DEL BUSCADOR --- */
+        function searchProducts(query) {
+            const term = query.toLowerCase();
+            
+            // Si el buscador está vacío
+            if(term === '') {
+                renderProducts(products);
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelector('.filter-btn:first-child').classList.add('active'); // Activa "Todos"
+                return;
+            }
+
+            // Filtrar por nombre
+            const filtered = products.filter(p => p.name.toLowerCase().includes(term));
+            
+            // Quitar clase activa de los filtros
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            
+            renderProducts(filtered);
+        }
+
+        /* --- FUNCIÓN DE FILTRADO --- */
+        function filterProducts(criteria) {
+            const searchInput = document.querySelector('.search-input');
+            if(searchInput) searchInput.value = '';
+            
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            if(event && event.target) event.target.classList.add('active');
+
+            let filtered = [];
+
+            if (criteria === 'all') {
+                filtered = products;
+            } 
+            else if (['Hombre', 'Mujer', 'Unisex'].includes(criteria)) {
+                filtered = products.filter(p => p.gender === criteria);
+            } 
+            else {
+                filtered = products.filter(p => p.category === criteria);
+            }
+
+            renderProducts(filtered);
+        }
+
+        function renderProducts(productsToShow) {
+            const grid = document.getElementById('products-grid');
+            if(!grid) return;
+            grid.innerHTML = ''; 
+            
+            if (productsToShow.length === 0) {
+                grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666; font-size: 1.1em;">No encontramos perfumes con ese filtro 🔍</p>';
+                return;
+            }
+
+            productsToShow.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                
+                let genderIcon = '👥';
+                if (product.gender === 'Hombre') genderIcon = '👨';
+                else if (product.gender === 'Mujer') genderIcon = '👩';
+                
+                let catLabel = 'Nicho';
+                if(product.category === 'trending') catLabel = 'Trending 🔥';
+                else if(product.category === 'arabic') catLabel = 'Árabe 🕌';
+
+                let imageHTML = `<div class="product-image">🧴</div>`;
+                if(product.image && product.image !== "") {
+                    imageHTML = `<div class="product-image"><img src="${product.image}" alt="${product.name}" onerror="this.onerror=null; this.parentNode.innerHTML='🧴';"></div>`;
+                }
+                
+                // Generar HTML de Decants
+                let optionsHTML = '<div class="decants-section"><label>Formato:</label><div class="decants-options">';
+                
+                if (!product.soloDecant) {
+                    optionsHTML += `
+                        <label class="decant-option" style="border-color: var(--gold); background-color: rgba(218, 180, 105, 0.1);">
+                            <input type="radio" name="decant-${product.id}" value="Botella" data-price="${product.price}" checked onchange="updatePrice(${product.id})">
+                            <span class="decant-label">Botella ($${product.price.toFixed(2)})</span>
+                        </label>
+                    `;
+                }
+
+                product.decants.forEach((decant, index) => {
+                    let isChecked = (product.soloDecant && index === 0) ? "checked" : "";
+                    optionsHTML += `
+                        <label class="decant-option">
+                            <input type="radio" name="decant-${product.id}" value="${decant.ml}" data-price="${decant.price}" ${isChecked} onchange="updatePrice(${product.id})">
+                            <span class="decant-label">${decant.ml}ml - $${decant.price.toFixed(2)}</span>
+                        </label>
+                    `;
+                });
+                optionsHTML += '</div></div>';
+                
+                // Botón extra SOLO para la colección Lattafa (ID 1)
+                let extraButtonHTML = '';
+                
+                card.innerHTML = `
+                    ${imageHTML}
+                    <div class="product-info">
+                        <div class="product-category">${catLabel}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <div class="product-gender">${genderIcon} ${product.gender}</div>
+                        <div class="product-rating">⭐ ${product.rating} <span style="color:#aaa; font-size:0.8em">(${product.reviews})</span></div>
+                        <p class="product-description">${product.description}</p>
+                        
+                        <div class="product-prices">
+                            <div class="price-item">
+                                <span class="price-label">Precio Seleccionado:</span>
+                                <span class="price-value" id="price-${product.id}">$${product.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-stock">✓ Disponible</div>
+                        ${optionsHTML}
+                        <button class="btn-add-cart" onclick="addToCart(${product.id})">Añadir al Carrito</button>
+                        ${extraButtonHTML}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function updatePrice(productId) {
+            const selectedRadio = document.querySelector(`input[name="decant-${productId}"]:checked`);
+            if(selectedRadio) {
+                const price = parseFloat(selectedRadio.getAttribute('data-price'));
+                const priceEl = document.getElementById(`price-${productId}`);
+                if(priceEl) priceEl.textContent = `$${price.toFixed(2)}`;
+            }
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const selectedRadio = document.querySelector(`input[name="decant-${productId}"]:checked`);
+            
+            if (!selectedRadio) return; 
+
+            let selectedSize = selectedRadio.value;
+            if(!isNaN(selectedSize)) selectedSize += "ml"; 
+
+            const selectedPrice = parseFloat(selectedRadio.getAttribute('data-price'));
+            const cartItemId = `${productId}-${selectedSize}`;
+            
+            const existing = cart.find(item => item.id === cartItemId);
+            
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({
+                    id: cartItemId,
+                    name: `${product.name} (${selectedSize})`,
+                    price: selectedPrice,
+                    quantity: 1
+                });
+            }
+            
+            localStorage.setItem('aromaverse_cart', JSON.stringify(cart));
+            updateCartCount();
+            
+            const btn = event.target;
+            const oldText = btn.innerText;
+            btn.innerText = "¡Añadido! ✓";
+            btn.style.backgroundColor = "#4CAF50";
+            setTimeout(() => { 
+                btn.innerText = oldText; 
+                btn.style.backgroundColor = "";
+            }, 1000);
+            
+            const panel = document.getElementById('cart-panel');
+            if(panel && panel.classList.contains('active')) updateCartDisplay();
+        }
+
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            const badge = document.getElementById('cart-count');
+            if(badge) badge.textContent = count;
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            if (!cartItems) return;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div class="cart-empty">Tu carrito está vacío</div>';
+                if(cartTotal) cartTotal.textContent = '$0.00';
+                return;
+            }
+            
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <h4>${item.name}</h4>
+                            <p>Cantidad: ${item.quantity}</p>
+                        </div>
+                        <div>
+                            <div class="cart-item-price">$${itemTotal.toFixed(2)}</div>
+                            <button onclick="removeFromCart('${item.id}')" style="border:none; background:none; color:#dab469; cursor:pointer; text-decoration:underline; font-size:12px;">Eliminar</button>
+                        </div>
+                    </div>`;
+            });
+            if(cartTotal) cartTotal.textContent = '$' + total.toFixed(2);
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            localStorage.setItem('aromaverse_cart', JSON.stringify(cart));
+            updateCartCount();
+            updateCartDisplay();
+        }
+
+        function toggleCart() {
+            const p = document.getElementById('cart-panel');
+            if(p) {
+                p.classList.toggle('active');
+                if(p.classList.contains('active')) updateCartDisplay();
+            }
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Tu carrito está vacío 🛒');
+                return;
+            }
+
+            const phoneNumber = "584242201111"; 
+            
+            let total = 0;
+            let message = "👋 ¡Hola! Vengo de la web y estoy listo para finalizar mi compra en *AromaVerse*.\n\n";
+            message += "📝 *Resumen del Pedido:*\n";
+
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                message += `▪️ ${item.name} x${item.quantity} — $${subtotal.toFixed(2)}\n`;
+            });
+
+            message += `\n💰 *TOTAL A PAGAR: $${total.toFixed(2)}*\n\n`;
+            message += "Quedo atento a los métodos de pago disponibles y detalles de envío. 🚚✨";
+
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if(el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+
+
+<veepn-lock-screen><template shadowrootmode="open"><style>html{box-sizing:border-box;text-size-adjust:100%;word-break:normal;tab-size:4}*,:before,:after{background-repeat:no-repeat;box-sizing:border-box}:before,:after{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0}hr{overflow:visible;height:0;color:inherit;border:0;border-top:1px solid}details,main{display:block}summary{display:list-item}small{font-size:80%}[hidden]{display:none!important}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}a{background-color:transparent}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace}pre{font-size:1em}b,strong{font-weight:bolder}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}iframe{border-style:none}input{border-radius:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit;color:inherit}optgroup{font-weight:700}button{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit],[role=button]{cursor:pointer}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button,html [type=button],[type=reset],[type=submit]{appearance:auto}button,input,select,textarea{background-color:transparent;border-style:none}button:-moz-focusring,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{outline:1px dotted ButtonText}select{appearance:none}a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-width:0}select::-ms-expand{display:none}select::-ms-value{color:currentcolor}legend{border:0;color:inherit;display:table;white-space:normal;max-width:100%}::-webkit-file-upload-button{appearance:auto;color:inherit;font:inherit}[disabled]{cursor:default}img{border-style:none}progress{vertical-align:baseline}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled=true]{cursor:default}ul,ol{list-style-type:none}figure{margin:0}@keyframes slide-in{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}.gradient-blue{background:radial-gradient(106.41% 128.47% at 50.15% 128.47%,#23abff,#3066ff)}.gradient-green{background:radial-gradient(92.26% 118.88% at 50.15% .13%,#00c3c3,#00aab3)}.gradient-purple{background:radial-gradient(165.12% 115.56% at 50.15% .13%,#a15aff,#00a0eb)}.bg-blue{background-color:#f2f5ff}.bg-purple{background-color:#f7f0ff}.bg-green{background-color:#ebffed}.lock-screen{font-family:FigtreeVF,sans-serif;letter-spacing:normal;position:fixed;z-index:2147483638;right:24px;bottom:24px;width:327px;border-radius:24px;overflow:hidden;box-shadow:0 24px 32px #00000014;animation:slide-in .3s ease-in-out forwards}.lock-screen__content{position:relative;padding:24px 24px 64px}.lock-screen__close{position:absolute;top:16px;right:16px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;opacity:.5}.lock-screen__label{height:26px;width:fit-content;border-radius:50px;background-color:#fff3;padding-inline:16px;display:flex;align-items:center;justify-content:center;gap:8px;color:#fff;font-size:12px;line-height:18px;margin:-8px auto 16px}.lock-screen__title{color:#fff;text-align:center;font-size:20px;line-height:28px;font-weight:600;margin-bottom:8px}.lock-screen__description{color:#f5f6f7;text-align:center;font-size:14px;line-height:20px}.lock-screen__description b{font-weight:600}.lock-screen__card{position:relative;z-index:1;margin-top:-44px;background-color:#fff;border-radius:24px;padding:32px 20px 20px}.lock-screen__inner{margin-bottom:24px}.lock-screen__submit{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;height:40px;width:100%;border-radius:12px;padding-inline:16px;background-color:#f70;color:#fff;margin-bottom:16px}.lock-screen__skip{display:flex;align-items:center;justify-content:center;font-size:14px;line-height:20px;color:#82829c;margin-inline:auto}.price-card{border:1px solid #f2f2fc;background:linear-gradient(254.14deg,#fafbff .04%,#f5f8ff 100.04%);border-radius:24px;padding:24px 28px}.price-card__label{color:#4a5764;text-align:center;font-size:14px;line-height:20px;text-transform:uppercase;margin-bottom:16px}.price-card__price{display:flex;justify-content:center;align-items:flex-start;column-gap:2px;margin-bottom:12px}.price-card__currency{color:#515478;font-size:18px;line-height:28px}.price-card__number{color:#14142a;text-align:center;font-size:64px;line-height:54px}.price-card__wrap{display:flex;flex-direction:column}.price-card__decimal{color:#515478;font-size:18px;line-height:28px;font-weight:600}.price-card__period{color:#515478;font-size:14px;line-height:20px;margin-top:-6px}.price-card__discount{position:relative;display:flex;align-items:center;justify-content:center;margin-bottom:12px}.price-card__discount-divider{position:absolute;z-index:0;top:50%;left:0;width:100%;height:1px;background-color:#dbe2f9;transform:translateY(-50%)}.price-card__discount-icon{position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%)}.price-card__discount-text{position:relative;z-index:2;color:#fff;font-size:12px;font-weight:600;line-height:18px}.price-card__features{display:flex;align-items:center;justify-content:center;column-gap:16px}.price-card__feature{color:#222e3a;font-size:14px;line-height:20px;display:flex;align-items:center;gap:6px}.price-card__feature:before{content:"";display:block;width:4px;height:4px;background-color:#20df9e;border-radius:50%;flex-shrink:0}.features-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.features-list__item{display:flex;flex-direction:column;align-items:center;gap:6px}.features-list__icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center}.features-list__text{color:#293a53;text-align:center;font-size:16px;line-height:24px;letter-spacing:-.1px}</style></template><style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2-variations");font-weight:100 1000;font-display:swap}</style></veepn-lock-screen></body></html>
